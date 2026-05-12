@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Civic Conservator | Map</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="web.css" rel="stylesheet"/>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{colors:{"background":"#f8fafa","surface-container-low":"#f2f4f4","surface-container-lowest":"#ffffff","surface-container":"#eceeee","surface-container-high":"#e6e8e8","on-surface":"#191c1d","on-surface-variant":"#3e4945","primary":"#005344","primary-container":"#006d5b","primary-fixed":"#9df3dc","on-primary-fixed-variant":"#005143","secondary-container":"#c8eade","outline-variant":"#bec9c4","tertiary":"#763527","tertiary-fixed":"#ffdad3","on-tertiary-fixed-variant":"#743425","on-primary":"#ffffff"},fontFamily:{"headline":["Manrope"],"body":["Manrope"],"label":["Manrope"]},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"}}}}
+</script>
+<style>body{font-family:'Manrope',sans-serif}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}</style>
+</head>
+<body class="bg-background text-on-surface min-h-screen pb-28">
+<header class="bg-[#f8fafa] sticky top-0 z-50 flex justify-between items-center w-full px-6 py-3 border-b border-outline-variant/15">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary"><span class="material-symbols-outlined">map</span></div>
+<span class="text-xl font-bold text-[#005344] tracking-tight">Civic Conservator</span>
+</div>
+<button class="w-10 h-10 flex items-center justify-center text-[#3e4945] hover:bg-[#e1e3e3] transition-colors rounded-full"><span class="material-symbols-outlined">notifications</span></button>
+</header>
+<main class="px-6 pt-8 max-w-3xl mx-auto">
+<section class="mb-6">
+<span class="text-on-surface-variant text-sm font-bold uppercase tracking-wider">Live Map</span>
+<h1 class="text-3xl font-extrabold tracking-tight text-on-surface mt-1">City Waste Activity</h1>
+</section>
+<section class="relative h-[440px] rounded-2xl overflow-hidden bg-surface-container mb-6 shadow-sm">
+<div class="absolute inset-0" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdrFRnjh95jKpPU2m-7Sxpo1-l2n5C3SOws5lEC2ggWD0__LivGNgKHzaYpLLKgs-bmh2N21ItDb7QsmMP81CYGuhAi3svVnBYl2S2kewr3Mjmda2at5qE4dqXVVyaWCCnEaZ4Figo5zPzRqvPJ5ux4ryV2Blk-CACIKjE1Ed_6K4e9u4g47JrC5J4avLDqURPvJDWdlAa5Br5sN8xiO4BC311P_X8ktz7Lqj3w17Lhjws2K8TbGLw0iYUEC02SyNc6b4v_ExCgPg');background-size:cover;background-position:center;"></div>
+<div class="absolute inset-0 bg-white/15"></div>
+<div class="absolute top-[24%] left-[30%] w-5 h-5 bg-tertiary border-2 border-white rounded-full shadow-lg"></div>
+<div class="absolute top-[46%] left-[58%] w-5 h-5 bg-primary border-2 border-white rounded-full shadow-lg"></div>
+<div class="absolute top-[62%] left-[42%] w-5 h-5 bg-tertiary border-2 border-white rounded-full shadow-lg"></div>
+<div class="absolute bottom-4 left-4 right-4 bg-primary/90 backdrop-blur-xl rounded-xl px-4 py-3 flex items-center justify-between text-white">
+<div><p class="text-xs font-bold uppercase tracking-widest">Active Reports</p><p class="text-2xl font-extrabold" id="mapActiveCount">0</p></div>
+<button class="bg-white/20 rounded-lg px-4 py-2 text-sm font-bold">Report New Issue</button>
+</div>
+</section>
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-xl font-bold">Nearby Reports</h2>
+<button class="text-primary text-sm font-bold">View All</button>
+</div>
+<div id="mapReportList" class="space-y-3"></div>
+</section>
+</main>
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#f8fafa]/85 backdrop-blur-xl rounded-t-2xl shadow-[0_-4px_16px_rgba(25,28,29,0.04)]">
+<a class="flex flex-col items-center justify-center text-[#3e4945] px-5 py-2 hover:text-[#006d5b] transition-all active:scale-90" href="#"><span class="material-symbols-outlined">home</span><span class="font-['Manrope'] text-[12px] font-medium mt-1">Home</span></a>
+<a class="flex flex-col items-center justify-center text-[#3e4945] px-5 py-2 hover:text-[#006d5b] transition-all active:scale-90" href="#"><span class="material-symbols-outlined">description</span><span class="font-['Manrope'] text-[12px] font-medium mt-1">Reports</span></a>
+<a class="flex flex-col items-center justify-center bg-[#c8eade] text-[#005344] rounded-2xl px-5 py-2 active:scale-90 transition-transform" href="#"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">map</span><span class="font-['Manrope'] text-[12px] font-bold mt-1">Map</span></a>
+<a class="flex flex-col items-center justify-center text-[#3e4945] px-5 py-2 hover:text-[#006d5b] transition-all active:scale-90" href="#"><span class="material-symbols-outlined">person</span><span class="font-['Manrope'] text-[12px] font-medium mt-1">Profile</span></a>
+</nav>
+<script src="app.js"></script>
+</body></html>

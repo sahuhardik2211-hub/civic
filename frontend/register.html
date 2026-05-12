@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Register | Urban Waste Intel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="web.css" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#cfe6f2",
+              "secondary": "#43655e",
+              "on-background": "#071e27",
+              "primary-container": "#006d5b",
+              "surface-container-low": "#e6f6ff",
+              "outline": "#6e7975",
+              "on-surface-variant": "#3e4945",
+              "on-primary": "#ffffff",
+              "background": "#f3faff",
+              "surface": "#f3faff",
+              "surface-container-lowest": "#ffffff",
+              "on-surface": "#071e27",
+              "primary": "#005344",
+              "on-primary-container": "#96ebd5",
+              "error": "#ba1a1a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-panel {
+        background: rgba(243, 250, 255, 0.82);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased min-h-screen flex flex-col">
+<main class="flex-grow flex items-center justify-center px-6 py-12 relative overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+<img class="w-full h-full object-cover grayscale" alt="" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNgHLtvaLvKi7AY3_S72P2HYismYLoNQA8vw7tbVyCfL-RE-NcH4BHYhQdBLNkFcZ2obSyWFDYfjA48vKvlNwM9aKFxsE7CwbcYCKZfl-kn0b0dwGzW70HU5WTIxb3VSz8ocg5MEGJg23IEBAG-wICsol9XK3gkZrQr8K_sYBOGnSK0xFbmG1E98RghCwE0069tNsm3VvFj-GNdtFuS-dkqG98uxY1CcmaikxH-m1dOO1dY-t5CgK-bAyl9_eB3BJ6P9ErhrrIIiQ"/>
+</div>
+<div class="z-10 w-full max-w-2xl space-y-8">
+<header class="text-center space-y-3">
+<a class="inline-flex items-center justify-center p-3 rounded-xl bg-primary-container text-on-primary-container mb-2" href="index.html" aria-label="Back to login">
+<span class="material-symbols-outlined text-3xl">recycling</span>
+</a>
+<h1 id="registerTitle" class="font-headline font-extrabold text-3xl tracking-tight text-primary">Create Citizen Account</h1>
+<p id="registerSubtitle" class="text-on-surface-variant font-medium">Join Urban Waste Intel to report and track local waste issues.</p>
+</header>
+<section class="glass-panel rounded-xl p-1 shadow-[0_32px_64px_-12px_rgba(7,30,39,0.06)]">
+<form id="registerForm" class="bg-surface-container-lowest rounded-lg p-8 space-y-6">
+<div class="bg-surface-container-low rounded-lg p-1 flex">
+<button id="citizenAccountButton" class="flex-1 py-3 text-sm font-label font-semibold tracking-wide rounded-lg bg-primary text-on-primary shadow-sm transition-all" type="button">Citizen</button>
+<button id="staffAccountButton" class="flex-1 py-3 text-sm font-label font-semibold tracking-wide text-on-surface-variant hover:text-primary transition-all" type="button">Municipal Staff</button>
+</div>
+<div class="grid md:grid-cols-2 gap-5">
+<div class="space-y-2">
+<label class="text-xs font-label font-bold uppercase tracking-widest text-secondary ml-1" for="fullName">Full Name</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">person</span>
+<input id="fullName" class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-on-surface placeholder:text-outline transition-all" placeholder="Aarav Sharma" required type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label font-bold uppercase tracking-widest text-secondary ml-1" for="email">Email Address</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">mail</span>
+<input id="email" class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-on-surface placeholder:text-outline transition-all" placeholder="name@example.com" required type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label font-bold uppercase tracking-widest text-secondary ml-1" for="phoneNumber">Phone Number</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">call</span>
+<input id="phoneNumber" class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-on-surface placeholder:text-outline transition-all" placeholder="9876543210" required type="tel"/>
+</div>
+</div>
+<div id="areaField" class="space-y-2">
+<label class="text-xs font-label font-bold uppercase tracking-widest text-secondary ml-1" for="area">Area</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">map</span>
+<input id="area" class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-on-surface placeholder:text-outline transition-all" placeholder="Ward 12" required type="text"/>
+</div>
+</div>
+<div id="staffRoleField" class="space-y-2 hidden">
+<label class="text-xs font-label font-bold uppercase tracking-widest text-secondary ml-1" for="staffRole">Staff Role</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">badge</span>
+<input id="staffRole" class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-on-surface placeholder:text-outline transition-all" placeholder="Sanitation Officer" type="text"/>
+</div>
+</div>
+</div>
+<div id="addressField" class="space-y-2">
+<label class="text-xs font-label font-bold uppercase tracking-widest text-secondary ml-1" for="address">Address</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-4 text-outline group-focus-within:text-primary transition-colors">home_pin</span>
+<textarea id="address" class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-on-surface placeholder:text-outline transition-all min-h-24" placeholder="House number, street, landmark" required></textarea>
+</div>
+</div>
+<div id="staffUsernameField" class="space-y-2 hidden">
+<label class="text-xs font-label font-bold uppercase tracking-widest text-secondary ml-1" for="staffUsername">Login Username</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">account_circle</span>
+<input id="staffUsername" class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-on-surface placeholder:text-outline transition-all" placeholder="staff.username" type="text"/>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-5">
+<div class="space-y-2">
+<label class="text-xs font-label font-bold uppercase tracking-widest text-secondary ml-1" for="password">Password</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">lock</span>
+<input id="password" class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-on-surface placeholder:text-outline transition-all" placeholder="Password" minlength="6" required type="password"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label font-bold uppercase tracking-widest text-secondary ml-1" for="confirmPassword">Confirm Password</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">lock_reset</span>
+<input id="confirmPassword" class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-on-surface placeholder:text-outline transition-all" placeholder="Confirm password" minlength="6" required type="password"/>
+</div>
+</div>
+</div>
+<p id="registerMessage" class="hidden text-sm font-semibold"></p>
+<button id="registerSubmit" class="w-full py-4 px-6 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold rounded-lg shadow-lg shadow-primary/20 hover:scale-[0.99] active:scale-95 transition-all duration-200" type="submit">
+Create Account
+</button>
+</form>
+</section>
+<footer class="text-center">
+<span class="text-on-surface-variant text-sm">Already have an account?</span>
+<a class="text-primary font-bold text-sm hover:underline ml-1" href="index.html">Sign in</a>
+</footer>
+</div>
+</main>
+<script src="app.js"></script>
+</body></html>

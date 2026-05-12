@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="web.css" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#934c3c",
+              "on-secondary-container": "#4c6a62",
+              "error-container": "#ffdad6",
+              "surface-container-high": "#e6e8e8",
+              "surface-container-low": "#f2f4f4",
+              "on-surface-variant": "#3e4945",
+              "outline": "#6e7975",
+              "on-primary-fixed": "#00201a",
+              "on-secondary": "#ffffff",
+              "on-surface": "#191c1d",
+              "primary-fixed-dim": "#81d6c0",
+              "background": "#f8fafa",
+              "error": "#ba1a1a",
+              "surface-tint": "#006b59",
+              "inverse-on-surface": "#eff1f1",
+              "on-background": "#191c1d",
+              "surface-dim": "#d8dada",
+              "primary": "#005344",
+              "surface-bright": "#f8fafa",
+              "inverse-surface": "#2e3131",
+              "on-error": "#ffffff",
+              "surface": "#f8fafa",
+              "on-primary-container": "#96ebd5",
+              "surface-variant": "#e1e3e3",
+              "on-tertiary-container": "#ffd1c7",
+              "on-secondary-fixed": "#01201a",
+              "inverse-primary": "#81d6c0",
+              "surface-container-highest": "#e1e3e3",
+              "primary-fixed": "#9df3dc",
+              "tertiary": "#763527",
+              "on-primary-fixed-variant": "#005143",
+              "primary-container": "#006d5b",
+              "on-tertiary-fixed": "#3b0902",
+              "secondary-container": "#c8eade",
+              "secondary": "#46645c",
+              "on-error-container": "#93000a",
+              "secondary-fixed-dim": "#adcec3",
+              "outline-variant": "#bec9c4",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed-variant": "#743425",
+              "tertiary-fixed-dim": "#ffb4a4",
+              "secondary-fixed": "#c8eade",
+              "on-secondary-fixed-variant": "#2e4c44",
+              "on-tertiary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed": "#ffdad3",
+              "surface-container": "#eceeee"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .step-active {
+            width: 2.5rem;
+            background: #005344;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar from JSON -->
+<header class="bg-[#f8fafa] dark:bg-slate-900 sticky top-0 z-[100] w-full">
+<div class="flex justify-between items-center w-full px-6 py-3">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="Close up portrait of a professional man in a clean studio environment with soft lighting and neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgKGLVtColkyi7zlELByi0SMy9n0C_60QE77EZFU5ZmDpQeqxaC-ONY3V70Dc-KeYik2HLztpo3BadGYvWva7GmZokalZ5meeYzfn8_7sYeW0ZvqYEzDsTCJg2Dz0rOmMZxP2oa61yYI7k505HgqVjZ_e9HwgrAIZTIqQsOcd-hGw05XjdpK4YuNbqGwx31xUEeaEwVgZPDCKkCys6gHOI4mBaSW3Tq8C0HqGVZ-wHp8uM5eb2OvIEX3vZMFFcdgjFJ54BSW8eNek"/>
+</div>
+<span class="text-xl font-bold text-[#005344] dark:text-emerald-500 font-['Manrope'] tracking-tight">Civic Conservator</span>
+</div>
+<button class="text-[#3e4945] hover:bg-[#e1e3e3] dark:hover:bg-slate-800 transition-colors p-2 rounded-full active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+<div class="bg-[#eceeee] dark:bg-slate-800 h-px"></div>
+</header>
+<main class="flex-1 overflow-y-auto pb-32">
+<!-- Progress Bar Section -->
+<section class="px-6 py-8">
+<div class="flex items-center justify-between mb-2">
+<span class="text-sm font-bold text-primary tracking-wide">STEP 1 OF 3</span>
+<span class="text-sm font-medium text-on-surface-variant">Location</span>
+</div>
+<div class="flex gap-2 h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="step-active h-full rounded-full transition-all duration-500"></div>
+<div class="flex-1 h-full bg-surface-container-high rounded-full"></div>
+<div class="flex-1 h-full bg-surface-container-high rounded-full"></div>
+</div>
+</section>
+<!-- Step 1: Location Picker (Active) -->
+<section class="px-6 mb-12">
+<div class="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-sm group">
+<div class="absolute inset-0 bg-surface-container">
+<img alt="City map" class="w-full h-full object-cover opacity-90" data-alt="Highly detailed minimalist aerial street map of a clean modern city with parks and river features in muted tones" data-location="London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR7VqsSx4u_rdFrwFyYLRPaZgQ9xa31x2KrPJaHDHjVdFca3vdMCxtymTfGKGX8ffCtISK43_Ao33FEBYPUu3e1zeHabBnAMz41Fpajrlsk490YE_5EbTbtGQwq1KI5o7oldDs_9thAFwhzit9wVY0r9KIT_e9fz5c5_FVXm62jWPDz_C01gGHWxzEePpAymehEVGJY_b0IN5KNKD679trA9fD0tWcyIOM4PS_RKRyqGaSPXG8dJtuKdIBmQ1bieOQ_gnntKYaSE8"/>
+</div>
+<!-- Map UI Overlays -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center animate-pulse">
+<div class="w-4 h-4 bg-primary rounded-full ring-4 ring-white"></div>
+</div>
+</div>
+<div class="absolute top-4 left-4 right-4 flex gap-2">
+<div class="flex-1 bg-surface-container-lowest/95 backdrop-blur-md rounded-2xl px-4 py-3 flex items-center gap-3 shadow-sm border border-outline-variant/15">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="search">search</span>
+<input id="issueLocation" class="bg-transparent border-none p-0 text-sm focus:ring-0 w-full placeholder:text-on-surface-variant" placeholder="Search address..." type="text"/>
+</div>
+</div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)]">
+<button id="useCurrentLocation" class="w-full bg-surface-container-lowest/90 backdrop-blur-xl hover:bg-surface-container-lowest transition-colors text-primary font-bold py-4 rounded-2xl flex items-center justify-center gap-2 shadow-lg border border-outline-variant/15 active:scale-95 duration-150" type="button">
+<span class="material-symbols-outlined" data-icon="my_location">my_location</span>
+                        Use Current Location
+                    </button>
+</div>
+</div>
+<p id="locationStatus" class="mt-3 text-sm font-semibold text-primary hidden"></p>
+<div class="mt-6 flex items-start gap-3 p-4 bg-surface-container-low rounded-2xl border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-container" data-icon="info">info</span>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                    Precise location helps our maintenance crews reach the issue 30% faster. Please ensure the pin matches the exact spot.
+                </p>
+</div>
+</section>
+<!-- Step 2: Details (Partial) -->
+<section class="px-6 mb-12">
+<h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-sm">2</span>
+                Issue Category
+            </h2>
+<div class="relative">
+<select id="issueCategory" class="w-full h-[56px] appearance-none bg-surface-container-highest border-none border-b-2 border-primary/20 rounded-t-xl px-4 text-on-surface-variant focus:ring-0" required>
+<option value="">Select Issue Category</option>
+<option>Overflowing Bin</option>
+<option>Illegal Dumping</option>
+<option>Missed Collection</option>
+<option>Street Sweeping Needed</option>
+<option>Public Bin Damaged</option>
+</select>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+<span class="material-symbols-outlined" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<textarea id="issueDescription" class="mt-4 w-full min-h-28 bg-surface-container-highest border-none border-b-2 border-primary/20 rounded-t-xl px-4 py-3 text-on-surface placeholder:text-on-surface-variant focus:ring-0" placeholder="Describe the issue and nearby landmark..." required></textarea>
+</section>
+<!-- Step 3: Photo (Partial) -->
+<section class="px-6 mb-12">
+<h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-sm">3</span>
+                Add Photo
+            </h2>
+<div class="grid grid-cols-2 gap-4">
+<label class="aspect-square bg-surface-container-highest rounded-3xl border-2 border-dashed border-outline-variant flex flex-col items-center justify-center gap-2 cursor-pointer overflow-hidden relative">
+<input id="cameraPhoto" class="hidden" accept="image/*" capture="environment" type="file"/>
+<img id="cameraPreview" class="hidden absolute inset-0 w-full h-full object-cover" alt="Camera preview"/>
+<div id="cameraEmpty" class="flex flex-col items-center justify-center gap-2">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant" data-icon="photo_camera">photo_camera</span>
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Camera</span>
+</div>
+</label>
+<label class="aspect-square bg-surface-container-highest rounded-3xl border-2 border-dashed border-outline-variant flex flex-col items-center justify-center gap-2 cursor-pointer overflow-hidden relative">
+<input id="galleryPhoto" class="hidden" accept="image/*" type="file"/>
+<img id="galleryPreview" class="hidden absolute inset-0 w-full h-full object-cover" alt="Gallery preview"/>
+<div id="galleryEmpty" class="flex flex-col items-center justify-center gap-2">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant" data-icon="gallery_thumbnail">gallery_thumbnail</span>
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Gallery</span>
+</div>
+</label>
+</div>
+<p id="photoStatus" class="mt-3 text-sm font-semibold text-primary hidden"></p>
+</section>
+</main>
+<!-- Navigation/Footer -->
+<footer class="fixed bottom-0 left-0 w-full bg-[#f8fafa]/80 backdrop-blur-xl z-[110] border-t border-[#bec9c4]/15 px-6 pb-8 pt-4">
+<div class="flex gap-4">
+<button class="flex-1 h-14 rounded-xl border border-outline-variant text-on-surface font-bold hover:bg-surface-container transition-colors active:scale-95 duration-150">
+                Back
+            </button>
+<button class="flex-[2] h-14 rounded-xl bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold shadow-lg shadow-primary/20 hover:opacity-90 transition-all active:scale-95 duration-150">
+                Next Step
+            </button>
+</div>
+</footer>
+<!-- BottomNavBar (Suppressed due to Transactional flow as per rule, but following design system for structure if needed elsewhere) -->
+<script src="app.js"></script>
+</body></html>

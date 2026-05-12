@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Civic Conservator | Citizen Dashboard</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="web.css" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#934c3c",
+              "on-secondary-container": "#4c6a62",
+              "error-container": "#ffdad6",
+              "surface-container-high": "#e6e8e8",
+              "surface-container-low": "#f2f4f4",
+              "on-surface-variant": "#3e4945",
+              "outline": "#6e7975",
+              "on-primary-fixed": "#00201a",
+              "on-secondary": "#ffffff",
+              "on-surface": "#191c1d",
+              "primary-fixed-dim": "#81d6c0",
+              "background": "#f8fafa",
+              "error": "#ba1a1a",
+              "surface-tint": "#006b59",
+              "inverse-on-surface": "#eff1f1",
+              "on-background": "#191c1d",
+              "surface-dim": "#d8dada",
+              "primary": "#005344",
+              "surface-bright": "#f8fafa",
+              "inverse-surface": "#2e3131",
+              "on-error": "#ffffff",
+              "surface": "#f8fafa",
+              "on-primary-container": "#96ebd5",
+              "surface-variant": "#e1e3e3",
+              "on-tertiary-container": "#ffd1c7",
+              "on-secondary-fixed": "#01201a",
+              "inverse-primary": "#81d6c0",
+              "surface-container-highest": "#e1e3e3",
+              "primary-fixed": "#9df3dc",
+              "tertiary": "#763527",
+              "on-primary-fixed-variant": "#005143",
+              "primary-container": "#006d5b",
+              "on-tertiary-fixed": "#3b0902",
+              "secondary-container": "#c8eade",
+              "secondary": "#46645c",
+              "on-error-container": "#93000a",
+              "secondary-fixed-dim": "#adcec3",
+              "outline-variant": "#bec9c4",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed-variant": "#743425",
+              "tertiary-fixed-dim": "#ffb4a4",
+              "secondary-fixed": "#c8eade",
+              "on-secondary-fixed-variant": "#2e4c44",
+              "on-tertiary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed": "#ffdad3",
+              "surface-container": "#eceeee"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Manrope', sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .glass-card {
+        background: rgba(0, 107, 89, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-[#f8fafa] dark:bg-slate-900 sticky top-0 z-50 flex justify-between items-center w-full px-6 py-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="professional headshot of a smiling man in business casual attire against a clean studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6dP7c8l2oWv25heM6mz95LhCcqvj3FPIPkmiyNUOOPZ6ek61gMEBUKgtBKUQ4SfqtciMg1g0N_zapI0nyDGTbMXCT8sh4M07do1P32sI79Bc07XNF6xu-EHqJq16uKYtsFebuKVbnsaJCB_7dabX3rNVu8IdO_5Sg2l650fHnpcvyNwmOEzXPyJUX6DTYTWcPRmVJo6CyV0cMbYDsZbtTXe0U21QIuswk75XsKLLUm9MorRrAq7s-GGeFwUkSS8qx3_u899cdXfA"/>
+</div>
+<span class="text-xl font-bold text-[#005344] dark:text-emerald-500 tracking-tight">Civic Conservator</span>
+</div>
+<button class="w-10 h-10 flex items-center justify-center text-[#3e4945] hover:bg-[#e1e3e3] dark:hover:bg-slate-800 transition-colors active:scale-95 duration-150 rounded-full">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<main class="flex-1 pb-32">
+<!-- Hero Section: Greeting & Quick Stats -->
+<section class="px-6 pt-8 pb-6">
+<div class="mb-8">
+<h1 class="text-3xl font-extrabold tracking-tight text-on-surface mb-2">Hello, Citizen!</h1>
+<p class="text-on-surface-variant body-lg">Your contributions keep our city pristine.</p>
+</div>
+<!-- Stats Bento Grid -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low rounded-xl p-5 flex flex-col justify-between h-32">
+<span class="material-symbols-outlined text-primary" data-icon="description">description</span>
+<div>
+<p class="text-2xl font-bold text-on-surface">3</p>
+<p class="text-xs font-medium text-on-surface-variant">Current active reports</p>
+</div>
+</div>
+<div class="bg-primary-fixed rounded-xl p-5 flex flex-col justify-between h-32">
+<span class="material-symbols-outlined text-on-primary-fixed" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="text-2xl font-bold text-on-primary-fixed">12</p>
+<p class="text-xs font-medium text-on-primary-fixed-variant">Resolved in your area</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="px-6 mb-8">
+<div class="relative w-full h-64 rounded-2xl overflow-hidden shadow-sm bg-surface-container">
+<!-- Map Thumbnail -->
+<div class="absolute inset-0 grayscale-[0.2] brightness-[0.95]" data-alt="stylized top-down map view of urban city streets with subtle grey tones and green park areas" data-location="Seattle" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdrFRnjh95jKpPU2m-7Sxpo1-l2n5C3SOws5lEC2ggWD0__LivGNgKHzaYpLLKgs-bmh2N21ItDb7QsmMP81CYGuhAi3svVnBYl2S2kewr3Mjmda2at5qE4dqXVVyaWCCnEaZ4Figo5zPzRqvPJ5ux4ryV2Blk-CACIKjE1Ed_6K4e9u4g47JrC5J4avLDqURPvJDWdlAa5Br5sN8xiO4BC311P_X8ktz7Lqj3w17Lhjws2K8TbGLw0iYUEC02SyNc6b4v_ExCgPg'); background-size: cover; background-position: center;">
+</div>
+<!-- Map Pins (Mockup) -->
+<div class="absolute top-1/4 left-1/3 w-4 h-4 bg-tertiary border-2 border-white rounded-full shadow-lg"></div>
+<div class="absolute bottom-1/3 right-1/4 w-4 h-4 bg-primary border-2 border-white rounded-full shadow-lg"></div>
+<div class="absolute top-1/2 left-1/2 w-4 h-4 bg-tertiary border-2 border-white rounded-full shadow-lg"></div>
+<!-- Glass Map Control -->
+<div class="absolute bottom-4 left-4 right-4 glass-card rounded-xl px-4 py-3 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-white text-xs font-bold uppercase tracking-widest">Live View</span>
+<span class="text-white/80 text-[10px]">Nearby Activity</span>
+</div>
+<button class="bg-white/20 hover:bg-white/30 text-white rounded-lg px-3 py-1 text-xs font-bold transition-colors">
+                        Expand Map
+                    </button>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-6 mb-12">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-white h-16 rounded-xl flex items-center justify-center gap-3 shadow-lg active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined" data-icon="photo_camera" style="font-variation-settings: 'FILL' 1;">photo_camera</span>
+<span class="text-lg font-bold tracking-tight">Report New Issue</span>
+</button>
+</section>
+<!-- Recent Activity Feed -->
+<section class="px-6">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold text-on-surface">Recent Activity</h2>
+<span class="text-primary text-sm font-bold">View All</span>
+</div>
+<div class="space-y-4">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex gap-4 items-start">
+<div class="bg-primary-fixed text-on-primary-fixed-variant p-2 rounded-lg">
+<span class="material-symbols-outlined text-lg" data-icon="task_alt">task_alt</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-on-surface mb-1">Missed collection on Pine St. resolved</p>
+<p class="text-xs text-on-surface-variant">2 hours ago • Sanitation Department</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex gap-4 items-start">
+<div class="bg-tertiary-fixed text-on-tertiary-fixed-variant p-2 rounded-lg">
+<span class="material-symbols-outlined text-lg" data-icon="report">report</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-on-surface mb-1">Bin on 5th Ave. reported as full</p>
+<p class="text-xs text-on-surface-variant">5 hours ago • Public Report</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex gap-4 items-start">
+<div class="bg-primary-fixed text-on-primary-fixed-variant p-2 rounded-lg">
+<span class="material-symbols-outlined text-lg" data-icon="task_alt">task_alt</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-on-surface mb-1">Street cleaning completed: Market St.</p>
+<p class="text-xs text-on-surface-variant">Yesterday • Maintenance Crew</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#f8fafa]/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-t-2xl shadow-[0_-4px_16px_rgba(25,28,29,0.04)]">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#c8eade] dark:bg-emerald-900/40 text-[#005344] dark:text-emerald-100 rounded-2xl px-5 py-2 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Manrope'] text-[12px] font-medium mt-1">Home</span>
+</a>
+<!-- Reports -->
+<a class="flex flex-col items-center justify-center text-[#3e4945] dark:text-slate-400 px-5 py-2 hover:text-[#006d5b] transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-['Manrope'] text-[12px] font-medium mt-1">Reports</span>
+</a>
+<!-- Map -->
+<a class="flex flex-col items-center justify-center text-[#3e4945] dark:text-slate-400 px-5 py-2 hover:text-[#006d5b] transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-['Manrope'] text-[12px] font-medium mt-1">Map</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-[#3e4945] dark:text-slate-400 px-5 py-2 hover:text-[#006d5b] transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Manrope'] text-[12px] font-medium mt-1">Profile</span>
+</a>
+</nav>
+<script src="app.js"></script>
+</body></html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | Urban Waste Intel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="web.css" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#cfe6f2",
+              "secondary-fixed": "#c5eae2",
+              "secondary": "#43655e",
+              "on-secondary-fixed-variant": "#2b4d47",
+              "surface-dim": "#c7dde9",
+              "on-background": "#071e27",
+              "tertiary-container": "#006c6c",
+              "primary-fixed-dim": "#81d6c0",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-container": "#8deceb",
+              "surface-bright": "#f3faff",
+              "secondary-container": "#c2e7df",
+              "tertiary-fixed": "#93f2f2",
+              "outline-variant": "#bec9c4",
+              "primary-container": "#006d5b",
+              "inverse-primary": "#81d6c0",
+              "surface-container-low": "#e6f6ff",
+              "secondary-fixed-dim": "#a9cec6",
+              "on-tertiary-fixed-variant": "#004f4f",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "#cfe6f2",
+              "inverse-on-surface": "#dff4ff",
+              "primary": "#005344",
+              "outline": "#6e7975",
+              "on-surface-variant": "#3e4945",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#76d6d5",
+              "background": "#f3faff",
+              "on-primary-fixed": "#00201a",
+              "error-container": "#ffdad6",
+              "surface": "#f3faff",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#96ebd5",
+              "on-secondary-fixed": "#00201c",
+              "surface-container-high": "#d5ecf8",
+              "on-secondary-container": "#476963",
+              "surface-container": "#dbf1fe",
+              "on-surface": "#071e27",
+              "primary-fixed": "#9df3dc",
+              "on-error": "#ffffff",
+              "inverse-surface": "#1e333c",
+              "surface-tint": "#006b59",
+              "on-primary-fixed-variant": "#005143",
+              "error": "#ba1a1a",
+              "tertiary": "#005252",
+              "on-tertiary-fixed": "#002020",
+              "on-error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(243, 250, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .tonal-stack-1 { background-color: #e6f6ff; }
+        .tonal-stack-2 { background-color: #ffffff; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased min-h-screen flex flex-col">
+<main class="flex-grow flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+<img class="w-full h-full object-cover grayscale" data-alt="abstract architectural patterns of a sustainable modern city building with clean geometric lines and soft morning shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNgHLtvaLvKi7AY3_S72P2HYismYLoNQA8vw7tbVyCfL-RE-NcH4BHYhQdBLNkFcZ2obSyWFDYfjA48vKvlNwM9aKFxsE7CwbcYCKZfl-kn0b0dwGzW70HU5WTIxb3VSz8ocg5MEGJg23IEBAG-wICsol9XK3gkZrQr8K_sYBOGnSK0xFbmG1E98RghCwE0069tNsm3VvFj-GNdtFuS-dkqG98uxY1CcmaikxH-m1dOO1dY-t5CgK-bAyl9_eB3BJ6P9ErhrrIIiQ"/>
+</div>
+<div class="z-10 w-full max-w-md space-y-10">
+<header class="text-center space-y-3">
+<div class="inline-flex items-center justify-center p-3 rounded-xl bg-primary-container text-on-primary-container mb-2">
+<span class="material-symbols-outlined text-3xl" data-icon="recycling">recycling</span>
+</div>
+<h1 class="font-headline font-extrabold text-3xl tracking-tight text-primary">Urban Waste Intel</h1>
+<p class="text-on-surface-variant font-medium">Environmental Intelligence Platform</p>
+</header>
+<div class="glass-panel p-1 rounded-xl flex items-center mb-8">
+<button class="flex-1 py-3 text-sm font-label font-semibold tracking-wide rounded-lg bg-primary text-on-primary shadow-sm transition-all duration-200">CITIZEN</button>
+<button class="flex-1 py-3 text-sm font-label font-semibold tracking-wide text-on-surface-variant hover:text-primary transition-all">MUNICIPAL STAFF</button>
+</div>
+<section class="tonal-stack-2 rounded-xl p-8 shadow-[0_32px_64px_-12px_rgba(7,30,39,0.04)] space-y-8">
+<div class="space-y-6">
+<div class="space-y-2">
+<label class="text-xs font-label font-bold uppercase tracking-widest text-secondary ml-1">Email Address</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors" data-icon="mail">mail</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-on-surface placeholder:text-outline transition-all" placeholder="name@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label font-bold uppercase tracking-widest text-secondary ml-1">Password</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors" data-icon="lock">lock</span>
+<input class="w-full pl-12 pr-12 py-4 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-on-surface placeholder:text-outline transition-all" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<label class="flex items-center space-x-2 cursor-pointer">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/40 bg-surface-container-low transition-all" type="checkbox"/>
+<span class="text-sm font-medium text-on-surface-variant">Remember me</span>
+</label>
+<a class="text-sm font-semibold text-primary hover:text-primary-container transition-colors" href="#">Forgot Password?</a>
+</div>
+<button class="w-full py-4 px-6 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold rounded-lg shadow-lg shadow-primary/20 hover:scale-[0.98] active:scale-95 transition-all duration-200">
+                    Sign In to Dashboard
+                </button>
+</section>
+<footer class="text-center space-y-4">
+<div class="flex items-center justify-center space-x-1">
+<span class="text-on-surface-variant text-sm">Don't have an account?</span>
+<a class="text-primary font-bold text-sm hover:underline" href="register.html">Create an Account</a>
+</div>
+<div class="pt-8 flex justify-center space-x-6 text-outline">
+<span class="material-symbols-outlined hover:text-primary cursor-pointer transition-colors" data-icon="shield">shield</span>
+<span class="material-symbols-outlined hover:text-primary cursor-pointer transition-colors" data-icon="language">language</span>
+<span class="material-symbols-outlined hover:text-primary cursor-pointer transition-colors" data-icon="info">info</span>
+</div>
+</footer>
+</div>
+</main>
+<footer class="w-full py-8 px-6 flex flex-col md:flex-row justify-between items-center gap-4 bg-[#f3faff] dark:bg-slate-950 tonal-stacking-level-1 bg-[#e6f6ff] dark:bg-slate-900">
+<div class="text-lg font-Manrope font-semibold text-[#005344] dark:text-[#9df3dc]">Urban Waste Intel</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-Inter text-xs tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#005344] dark:hover:text-[#9df3dc] transition-opacity opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-Inter text-xs tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#005344] dark:hover:text-[#9df3dc] transition-opacity opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-Inter text-xs tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#005344] dark:hover:text-[#9df3dc] transition-opacity opacity-80 hover:opacity-100" href="#">Accessibility</a>
+<a class="font-Inter text-xs tracking-wide text-slate-500 dark:text-slate-400 hover:text-[#005344] dark:hover:text-[#9df3dc] transition-opacity opacity-80 hover:opacity-100" href="#">Security Registry</a>
+</div>
+<p class="font-Inter text-xs tracking-wide text-slate-500 dark:text-slate-400">© 2024 Municipal Environmental Intelligence. All rights reserved.</p>
+</footer>
+<script src="app.js"></script>
+</body></html>

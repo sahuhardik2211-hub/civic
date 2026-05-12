@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Civic Conservator | Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="web.css" rel="stylesheet"/>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{colors:{"background":"#f8fafa","surface-container-low":"#f2f4f4","surface-container-lowest":"#ffffff","surface-container-highest":"#e1e3e3","on-surface":"#191c1d","on-surface-variant":"#3e4945","primary":"#005344","primary-container":"#006d5b","primary-fixed":"#9df3dc","secondary-container":"#c8eade","outline-variant":"#bec9c4","on-primary":"#ffffff"},fontFamily:{"headline":["Manrope"],"body":["Manrope"],"label":["Manrope"]},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"}}}}
+</script>
+<style>body{font-family:'Manrope',sans-serif}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}</style>
+</head>
+<body class="bg-background text-on-surface min-h-screen pb-28">
+<header class="bg-[#f8fafa] sticky top-0 z-50 flex justify-between items-center w-full px-6 py-3 border-b border-outline-variant/15">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary"><span class="material-symbols-outlined">person</span></div>
+<span class="text-xl font-bold text-[#005344] tracking-tight">Civic Conservator</span>
+</div>
+<a class="w-10 h-10 flex items-center justify-center text-[#3e4945] hover:bg-[#e1e3e3] transition-colors rounded-full" href="index.html" aria-label="Sign out"><span class="material-symbols-outlined">logout</span></a>
+</header>
+<main class="px-6 pt-8 max-w-2xl mx-auto">
+<section class="bg-surface-container-lowest rounded-2xl p-6 mb-6 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-20 h-20 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary"><span class="material-symbols-outlined text-4xl" style="font-variation-settings:'FILL' 1;">person</span></div>
+<div>
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-widest">Citizen Profile</p>
+<h1 id="profileName" class="text-2xl font-extrabold tracking-tight">Citizen</h1>
+<p id="profileEmail" class="text-sm text-on-surface-variant mt-1">Loading...</p>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-surface-container-low rounded-xl p-5"><span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Total Reports</span><p id="profileReports" class="text-3xl font-extrabold text-primary mt-4">0</p></div>
+<div class="bg-primary-fixed rounded-xl p-5"><span class="text-xs font-bold uppercase tracking-widest text-primary">Resolved</span><p id="profileResolved" class="text-3xl font-extrabold text-primary mt-4">0</p></div>
+</section>
+<section class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm">
+<div class="p-5 border-b border-outline-variant/15"><h2 class="text-lg font-bold">Account Details</h2></div>
+<div class="divide-y divide-outline-variant/15">
+<div class="p-5 flex gap-4"><span class="material-symbols-outlined text-primary">call</span><div><p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Phone</p><p id="profilePhone" class="font-semibold mt-1">Loading...</p></div></div>
+<div class="p-5 flex gap-4"><span class="material-symbols-outlined text-primary">map</span><div><p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Area</p><p id="profileArea" class="font-semibold mt-1">Loading...</p></div></div>
+<div class="p-5 flex gap-4"><span class="material-symbols-outlined text-primary">home_pin</span><div><p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Address</p><p id="profileAddress" class="font-semibold mt-1">Loading...</p></div></div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#f8fafa]/85 backdrop-blur-xl rounded-t-2xl shadow-[0_-4px_16px_rgba(25,28,29,0.04)]">
+<a class="flex flex-col items-center justify-center text-[#3e4945] px-5 py-2 hover:text-[#006d5b] transition-all active:scale-90" href="#"><span class="material-symbols-outlined">home</span><span class="font-['Manrope'] text-[12px] font-medium mt-1">Home</span></a>
+<a class="flex flex-col items-center justify-center text-[#3e4945] px-5 py-2 hover:text-[#006d5b] transition-all active:scale-90" href="#"><span class="material-symbols-outlined">description</span><span class="font-['Manrope'] text-[12px] font-medium mt-1">Reports</span></a>
+<a class="flex flex-col items-center justify-center text-[#3e4945] px-5 py-2 hover:text-[#006d5b] transition-all active:scale-90" href="#"><span class="material-symbols-outlined">map</span><span class="font-['Manrope'] text-[12px] font-medium mt-1">Map</span></a>
+<a class="flex flex-col items-center justify-center bg-[#c8eade] text-[#005344] rounded-2xl px-5 py-2 active:scale-90 transition-transform" href="#"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">person</span><span class="font-['Manrope'] text-[12px] font-bold mt-1">Profile</span></a>
+</nav>
+<script src="app.js"></script>
+</body></html>
